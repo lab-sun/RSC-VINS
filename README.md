@@ -126,14 +126,6 @@ For rolling shutter camera (carefully calibrated, reprojection error under 0.5 p
 
 ## 6. Docker Support
 
-To further facilitate the building process, we add docker in our code. Docker environment is like a sandbox, thus makes our code environment-independent. To run with docker, first make sure [ros](http://wiki.ros.org/ROS/Installation) and [docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) are installed on your machine. Then add your account to `docker` group by `sudo usermod -aG docker $YOUR_USER_NAME`. **Relaunch the terminal or logout and re-login if you get `Permission denied` error**, type:
-```bash
-cd ~/catkin_ws/src/RSC-VINS/docker
-make build
-./run.sh LAUNCH_FILE_NAME   # ./run.sh euroc.launch
-```
-Note that the docker building process may take a while depends on your network and machine. After RSC-VINS successfully started, open another terminal and play your bag file, then you should be able to see the result. If you need modify the code, simply run `./run.sh LAUNCH_FILE_NAME` after your changes.
-
 ## 7. Core Modules
 
 ### 7.1 NetVLAD-based Initialization (`vins_estimator/src/netvlad_initial`)
@@ -179,3 +171,14 @@ If you use RSC-VINS for your academic research, please cite the original VINS-Mo
 * **VINS-Mono: A Robust and Versatile Monocular Visual-Inertial State Estimator**, Tong Qin, Peiliang Li, Zhenfei Yang, Shaojie Shen, IEEE Transactions on Robotics [pdf](https://ieeexplore.ieee.org/document/8421746/?arnumber=8421746&source=authoralert)
 
 * **Online Temporal Calibration for Monocular Visual-Inertial Systems**, Tong Qin, Shaojie Shen, IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2018), **best student paper award** [pdf](https://ieeexplore.ieee.org/abstract/document/8593603)
+
+* @INPROCEEDINGS{11277738,
+  author={Lin, Shuyue and Sun, Yuxiang},
+  booktitle={2025 International Conference on Information and Automation (ICIA)}, 
+  title={Region-based Initialization and Spatial-constrained Loop Closure Detection for Efficient Visual-inertial SLAM}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={353-358},
+  keywords={Location awareness;Simultaneous localization and mapping;Accuracy;Automation;Liquid crystal displays;Robustness;Real-time systems},
+  doi={10.1109/ICIA64617.2025.11277738}}
